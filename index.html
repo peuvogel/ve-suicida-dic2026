@@ -103,6 +103,35 @@ figcaption b{color:var(--ink-2);font-weight:560}
   width:auto;height:auto;line-height:1.45}
 .do b{color:var(--ink);font-weight:560}
 
+/* ---------- comparador: segure para reverter ---------- */
+.hold{margin:0 0 22px;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;
+  touch-action:pan-y;cursor:pointer;outline:none}
+.hold:focus-visible .hstage{box-shadow:0 0 0 2px var(--ink)}
+.hstage{position:relative;border-radius:10px;overflow:hidden;background:#000;
+  border:1px solid var(--line-2)}
+.hstage img{width:100%;height:auto;display:block;-webkit-user-drag:none}
+.hstage img.hb{position:absolute;inset:0;opacity:0;will-change:opacity}
+.hcue{position:absolute;right:9px;bottom:9px;z-index:3;display:flex;align-items:center;gap:6px;
+  font-size:10.5px;font-weight:560;letter-spacing:.02em;color:rgba(255,255,255,.86);
+  background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.16);border-radius:100px;
+  padding:5px 11px 5px 8px;pointer-events:none;transition:opacity .18s}
+.hcue .dot{width:13px;height:13px;border-radius:50%;border:1.5px solid rgba(255,255,255,.85);
+  position:relative;flex:none}
+.hcue .dot::after{content:"";position:absolute;inset:2.5px;border-radius:50%;background:#fff;
+  animation:pulso 1.5s ease-in-out infinite}
+@keyframes pulso{0%,100%{transform:scale(.6);opacity:.5}50%{transform:scale(1);opacity:1}}
+.hold.ativo .hcue{opacity:0}
+.hbar{height:2px;background:var(--line);border-radius:2px;margin:10px 0 0;overflow:hidden}
+.hbar i{display:block;height:100%;width:0;background:var(--red);border-radius:2px}
+.hout{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin:12px 0 0}
+.hn{font-family:var(--font-d);font-size:clamp(38px,11.5vw,54px);font-weight:640;
+  letter-spacing:-.045em;line-height:1;color:var(--red);font-variant-numeric:tabular-nums}
+.hu{font-size:13px;font-weight:560;letter-spacing:.06em;text-transform:uppercase;color:var(--faint)}
+.hleg{position:relative;height:19px;margin:8px 0 0}
+.hleg span{position:absolute;left:0;top:0;font-size:13px;line-height:1.45;color:var(--muted)}
+.hleg .lb2{opacity:0}
+@media (prefers-reduced-motion:reduce){.hcue .dot::after{animation:none}}
+
 /* ---------- gráficos ---------- */
 .chart{border:1px solid var(--line-2);border-radius:10px;padding:14px 12px 10px;margin:0 0 12px;
   background:var(--bg-2)}
@@ -144,10 +173,10 @@ footer{border-top:1px solid var(--line-2);margin-top:30px;
   <p class="kicker">15º Congresso do DIC, Curitiba 2026, ID 1133896</p>
   <h1>Ventrículo esquerdo suicida após TAVI</h1>
   <p class="meta"><b>Flores MP</b><sup>1</sup>; Freire de Carvalho MVS<sup>1</sup>; Souza Neri AJ<sup>1</sup>;
-     <b>Almeida PV</b><sup>2</sup>; Bomfim AB<sup>2</sup>; Vieira de Melo JP<sup>3</sup>;
+     Almeida PV<sup>2</sup>; Bomfim AB<sup>2</sup>; Vieira de Melo JP<sup>3</sup>;
      Cavalcante LRS<sup>2</sup>; Filgueiras PHC<sup>1</sup>; Vieira de Melo RM<sup>1</sup></p>
   <p class="afil">
-    <span><sup>1</sup>Hospital São Rafael, Rede D'Or, Salvador, BA</span>
+    <span><sup>1</sup>IDOR, Instituto D'Or de Pesquisa e Ensino, Salvador, BA</span>
     <span><sup>2</sup>Universidade Federal da Bahia, Salvador, BA</span>
     <span><sup>3</sup>Escola Bahiana de Medicina e Saúde Pública, Salvador, BA</span>
   </p>
@@ -244,17 +273,20 @@ footer{border-top:1px solid var(--line-2);margin-top:30px;
 <section id="reversao">
   <p class="kicker">Reversão</p>
 
-  <figure>
-    <div class="frame">
-      <span class="lb">Doppler contínuo, 30 min depois</span>
-      <img src="media/doppler-pos.jpg" alt="Doppler contínuo após tratamento com velocidade máxima de 2,02 m/s e gradiente de 16,33 mmHg" loading="lazy">
+  <div class="hold" id="hold" role="button" tabindex="0"
+       aria-label="Segure para comparar o Doppler antes e depois do tratamento">
+    <div class="hstage">
+      <img class="ha" src="media/doppler-obstrucao.jpg" alt="Doppler contínuo durante a obstrução, envelope côncavo com pico tardio">
+      <img class="hb" src="media/doppler-pos.jpg" alt="Doppler contínuo após o tratamento, envelope baixo e arredondado" loading="lazy">
+      <span class="lb">Doppler contínuo</span>
+      <span class="hcue"><span class="dot"></span>Segure para reverter</span>
     </div>
-    <figcaption><b>Envelope baixo e arredondado.</b> Vmáx 2,02 m/s.</figcaption>
-  </figure>
-
-  <div class="big ok">
-    <div class="n">16,33</div>
-    <div class="u">mmHg, trinta minutos depois</div>
+    <div class="hbar"><i></i></div>
+    <div class="hout"><span class="hn">163,88</span><span class="hu">mmHg</span></div>
+    <div class="hleg">
+      <span class="lb1">Envelope côncavo com pico tardio, Vmáx 6,40 m/s</span>
+      <span class="lb2">Envelope baixo e arredondado, Vmáx 2,02 m/s</span>
+    </div>
   </div>
 
   <figure>
@@ -369,7 +401,7 @@ footer{border-top:1px solid var(--line-2);margin-top:30px;
 
 <footer>
   <p style="margin:0 0 4px">Ventrículo Esquerdo Suicida Após TAVI em Paciente Octogenário, ID 1133896</p>
-  <p style="margin:0 0 4px">Hospital São Rafael, Rede D'Or, Salvador, BA</p>
+  <p style="margin:0 0 4px">IDOR, Instituto D'Or de Pesquisa e Ensino, Salvador, BA</p>
   <p style="margin:0">15º Congresso do DIC, Curitiba, outubro de 2026</p>
 </footer>
 
@@ -418,6 +450,62 @@ footer{border-top:1px solid var(--line-2);margin-top:30px;
     if (document.hidden) return;
     vids.forEach(v => { if (want.has(v) && v.paused) tocar(v); });
   });
+})();
+
+/* comparador: aperte e segure para reverter o gradiente */
+(function(){
+  const el = document.getElementById('hold');
+  if (!el) return;
+  const img  = el.querySelector('.hb');
+  const bar  = el.querySelector('.hbar i');
+  const num  = el.querySelector('.hn');
+  const lb1  = el.querySelector('.lb1');
+  const lb2  = el.querySelector('.lb2');
+  const DE = 163.88, PARA = 16.33;
+  const C1 = [255, 107, 105], C2 = [62, 207, 160];
+  const DUR = 620;                       // ms para completar a reversão
+  let t = 0, alvo = 0, raf = null, ultimo = 0;
+
+  const fmt = v => v.toFixed(2).replace('.', ',');
+  const mix = (a, b, k) => Math.round(a + (b - a) * k);
+
+  function pinta(){
+    const e = t < .5 ? 2*t*t : 1 - Math.pow(-2*t+2, 2)/2;   // easing suave
+    img.style.opacity = e;
+    bar.style.width = (t * 100) + '%';
+    num.textContent = fmt(DE + (PARA - DE) * e);
+    num.style.color = `rgb(${mix(C1[0],C2[0],e)},${mix(C1[1],C2[1],e)},${mix(C1[2],C2[2],e)})`;
+    lb1.style.opacity = 1 - e;
+    lb2.style.opacity = e;
+  }
+
+  function passo(agora){
+    const dt = ultimo ? agora - ultimo : 16;
+    ultimo = agora;
+    const d = dt / DUR;
+    if (alvo > t) t = Math.min(1, t + d); else t = Math.max(0, t - d);
+    pinta();
+    if ((alvo === 1 && t < 1) || (alvo === 0 && t > 0)) raf = requestAnimationFrame(passo);
+    else { raf = null; ultimo = 0; }
+  }
+
+  function anima(v){
+    alvo = v;
+    el.classList.toggle('ativo', v === 1);
+    if (!raf) { ultimo = 0; raf = requestAnimationFrame(passo); }
+  }
+
+  el.addEventListener('pointerdown', e => { e.preventDefault(); anima(1); });
+  ['pointerup','pointercancel','pointerleave'].forEach(n =>
+    el.addEventListener(n, () => anima(0)));
+  el.addEventListener('contextmenu', e => e.preventDefault());
+  el.addEventListener('keydown', e => {
+    if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); anima(1); }
+  });
+  el.addEventListener('keyup', e => {
+    if (e.key === ' ' || e.key === 'Enter') anima(0);
+  });
+  pinta();
 })();
 
 /* take-home some enquanto estiver sem texto */
