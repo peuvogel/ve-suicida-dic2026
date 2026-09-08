@@ -4,126 +4,124 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ventrículo esquerdo suicida após TAVI | 15º Congresso do DIC</title>
-<meta name="description" content="Material complementar ao pôster. Timeline do caso, imagens ecocardiográficas, mecanismo e reversão.">
-<meta name="theme-color" content="#FFFFFF">
+<meta name="description" content="Imagens ecocardiográficas da obstrução dinâmica intraventricular após TAVI. Material complementar ao pôster.">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🫀</text></svg>">
 <style>
 :root{
-  --navy:#011875; --magenta:#D02567;
-  --red:#E24B4A; --blue:#185FA5; --amber:#BA7517; --green:#0F6E56;
-  --ink:#0B0C0E; --ink-2:#3C4147; --muted:#767B82; --faint:#9AA0A6;
-  --line:#E6E8EB;
-  --paper:#FFFFFF; --paper-2:#F7F8F9;
+  --bg:#000000; --bg-2:#0B0C0E; --line:#1D2025; --line-2:#141619;
+  --ink:#F2F3F5; --ink-2:#C4C8CE; --muted:#8B9199; --faint:#61666D;
+  --red:#FF6B69; --green:#3ECFA0; --blue:#6FA8DC; --amber:#E2A93F;
   --font:"SF Pro Text","SF Pro Display",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
   --font-d:"SF Pro Display","SF Pro Text",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  --maxw:660px;
-  --tabh:46px;
+  --maxw:680px; --tabh:46px;
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html{scroll-behavior:smooth;scroll-padding-top:calc(var(--tabh) + 14px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--tabh) + 12px);background:var(--bg)}
 body{
-  margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);
-  font-size:15.5px;line-height:1.55;letter-spacing:-.006em;
+  margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);
+  font-size:15.5px;line-height:1.5;letter-spacing:-.006em;
   -webkit-font-smoothing:antialiased;overflow-x:hidden;
 }
 img,video,svg{max-width:100%;display:block}
 
-/* ---------- linha de progresso ---------- */
-#prog{position:fixed;top:0;left:0;height:2px;width:0;z-index:60;background:var(--navy);
+#prog{position:fixed;top:0;left:0;height:2px;width:0;z-index:60;background:var(--red);
   transition:width .1s linear}
 
-/* ---------- abas fixas ---------- */
-#tabs{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);
-  border-bottom:1px solid var(--line);height:var(--tabh)}
+#tabs{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.82);
+  border-bottom:1px solid var(--line-2);height:var(--tabh)}
 @supports (backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px)){
-  #tabs{backdrop-filter:saturate(1.8) blur(16px);-webkit-backdrop-filter:saturate(1.8) blur(16px)}
+  #tabs{backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
 }
 #tabs .row{max-width:var(--maxw);margin:0 auto;height:100%;display:flex;align-items:center;
-  gap:6px;padding:0 12px;overflow-x:auto;scrollbar-width:none}
+  gap:5px;padding:0 12px;overflow-x:auto;scrollbar-width:none}
 #tabs .row::-webkit-scrollbar{display:none}
 #tabs a{flex:none;text-decoration:none;font-size:13px;font-weight:510;color:var(--muted);
-  padding:6px 12px;border-radius:100px;letter-spacing:-.01em;transition:.16s}
-#tabs a.on{background:var(--ink);color:#fff}
+  padding:6px 12px;border-radius:100px;letter-spacing:-.01em;transition:.16s;white-space:nowrap}
+#tabs a.on{background:var(--ink);color:#000}
 
-/* ---------- estrutura ---------- */
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
-header{padding:34px 0 26px;border-bottom:1px solid var(--line)}
-section{padding:34px 0 4px;scroll-margin-top:calc(var(--tabh) + 10px)}
-.kicker{font-size:11px;font-weight:590;letter-spacing:.09em;text-transform:uppercase;
-  color:var(--faint);margin:0 0 12px}
-h1{font-family:var(--font-d);font-size:clamp(26px,7vw,34px);font-weight:640;letter-spacing:-.028em;
-  line-height:1.14;margin:0 0 10px}
-h2{font-family:var(--font-d);font-size:20px;font-weight:620;letter-spacing:-.022em;margin:0 0 8px}
-h3{font-size:14px;font-weight:590;letter-spacing:-.008em;margin:0 0 4px}
-p{margin:0 0 12px}
-.sub{color:var(--ink-2);font-size:16px;margin:0 0 18px}
-.meta{font-size:12.5px;line-height:1.5;color:var(--muted);margin:0 0 4px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+header{padding:30px 0 22px}
+section{padding:30px 0 2px;scroll-margin-top:calc(var(--tabh) + 8px)}
+.kicker{font-size:10.5px;font-weight:590;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--faint);margin:0 0 10px}
+h1{font-family:var(--font-d);font-size:clamp(25px,6.8vw,32px);font-weight:620;letter-spacing:-.03em;
+  line-height:1.14;margin:0 0 8px}
+h2{font-family:var(--font-d);font-size:18px;font-weight:600;letter-spacing:-.024em;margin:0 0 12px;
+  color:var(--ink)}
+p{margin:0 0 10px}
+.meta{font-size:12px;line-height:1.5;color:var(--muted);margin:0}
 .meta b{color:var(--ink-2);font-weight:560}
-.note{font-size:12.5px;color:var(--faint);margin:14px 0 0}
-.rule{height:1px;background:var(--line);margin:30px 0 0;border:0}
+.meta sup{font-size:.72em;font-weight:620;color:var(--red);vertical-align:.42em;line-height:0}
+.afil{font-size:10.5px;line-height:1.5;color:var(--faint);margin:8px 0 0}
+.afil span{display:block}
+.afil sup{font-size:.8em;font-weight:620;color:var(--red);vertical-align:.42em;line-height:0;margin-right:3px}
+.note{font-size:11.5px;color:var(--faint);margin:14px 0 0}
+hr.rule{height:1px;background:var(--line-2);border:0;margin:26px 0 0}
 
-/* ---------- timeline ---------- */
-.tl{list-style:none;margin:0;padding:0}
-.tl li{position:relative;padding:0 0 22px 20px;border-left:1px solid var(--line)}
-.tl li:last-child{padding-bottom:4px;border-left-color:transparent}
-.tl li::before{content:"";position:absolute;left:-4px;top:5px;width:7px;height:7px;border-radius:50%;
-  background:#fff;border:1.5px solid var(--faint)}
-.tl li.mark::before{border-color:var(--red);background:var(--red)}
-.tl li.good::before{border-color:var(--green);background:var(--green)}
-.tl .t{font-size:11.5px;font-weight:590;letter-spacing:.05em;text-transform:uppercase;
-  color:var(--muted);margin:0 0 3px}
-.tl li.mark .t{color:var(--red)}
-.tl li.good .t{color:var(--green)}
-.tl .d{font-size:14.5px;line-height:1.5;color:var(--ink-2);margin:0}
-.tl .d b{color:var(--ink);font-weight:560}
+/* ---------- contexto: linhas curtas ---------- */
+.ctx{list-style:none;margin:0;padding:0}
+.ctx li{display:flex;gap:12px;padding:9px 0;border-bottom:1px solid var(--line-2);font-size:14.5px}
+.ctx li:last-child{border-bottom:0}
+.ctx .k{flex:none;width:82px;font-size:10.5px;font-weight:590;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--faint);padding-top:3px}
+.ctx .v{color:var(--ink-2);line-height:1.45}
+.ctx .v b{color:var(--ink);font-weight:560}
+.ctx li.hit .k{color:var(--red)}
+.ctx li.hit .v b{color:var(--red)}
 
 /* ---------- mídia ---------- */
-figure{margin:0 0 20px}
-.frame{position:relative;border-radius:12px;overflow:hidden;background:#000;
-  border:1px solid var(--line)}
+figure{margin:0 0 22px}
+.frame{position:relative;border-radius:10px;overflow:hidden;background:#000;
+  border:1px solid var(--line-2)}
 .frame video,.frame img{width:100%;height:auto;display:block}
-.frame .lb{position:absolute;left:10px;bottom:10px;z-index:2;
-  font-size:10px;font-weight:510;letter-spacing:.05em;text-transform:uppercase;
-  color:rgba(255,255,255,.78);background:rgba(10,10,12,.55);
-  border-radius:6px;padding:4px 8px;pointer-events:none}
+.frame .lb{position:absolute;left:9px;bottom:9px;z-index:2;
+  font-size:9.5px;font-weight:510;letter-spacing:.06em;text-transform:uppercase;
+  color:rgba(255,255,255,.62);background:rgba(0,0,0,.42);
+  border:1px solid rgba(255,255,255,.10);border-radius:5px;padding:3px 7px;pointer-events:none}
 .frame .tap{position:absolute;inset:0;display:none;align-items:center;justify-content:center;
-  background:rgba(0,0,0,.38);color:#fff;font-size:13px;z-index:3;cursor:pointer}
+  background:rgba(0,0,0,.42);color:#fff;font-size:13px;z-index:3;cursor:pointer}
 .frame.needtap .tap{display:flex}
-figcaption{font-size:13px;line-height:1.5;color:var(--muted);margin:8px 2px 0}
+figcaption{font-size:13px;line-height:1.45;color:var(--muted);margin:8px 2px 0}
 figcaption b{color:var(--ink-2);font-weight:560}
 
-/* ---------- números ---------- */
-.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);
-  border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:0 0 20px}
-.nums div{background:#fff;padding:11px 12px}
-.nums .k{font-size:10.5px;font-weight:560;letter-spacing:.05em;text-transform:uppercase;
-  color:var(--faint);margin:0 0 3px}
-.nums .v{font-family:var(--font-d);font-size:18px;font-weight:620;letter-spacing:-.026em;line-height:1.1;margin:0}
-.nums .v span{font-size:11px;font-weight:500;color:var(--muted);letter-spacing:0}
+/* ---------- número em destaque ---------- */
+.big{margin:2px 0 20px}
+.big .n{font-family:var(--font-d);font-size:clamp(40px,12vw,58px);font-weight:640;
+  letter-spacing:-.045em;line-height:1;color:var(--red)}
+.big.ok .n{color:var(--green)}
+.big .u{font-size:12px;font-weight:560;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--faint);margin-top:8px}
+
+/* ---------- conduta ---------- */
+.do{list-style:none;margin:0 0 14px;padding:0}
+.do li{position:relative;padding:0 0 10px 20px;font-size:14.5px;line-height:1.45;color:var(--ink-2)}
+.do li::before{content:"";position:absolute;left:1px;top:8px;width:6px;height:6px;border-radius:50%;
+  background:var(--green)}
+.do.no li::before{background:none;left:0;top:0;content:"×";color:var(--red);font-size:14px;
+  width:auto;height:auto;line-height:1.45}
+.do b{color:var(--ink);font-weight:560}
 
 /* ---------- gráficos ---------- */
-.chart{border:1px solid var(--line);border-radius:12px;padding:14px 12px 10px;margin:0 0 14px}
-.chart h3{margin:0 0 1px;padding:0 4px}
-.chart .cs{font-size:12px;color:var(--muted);margin:0 0 8px;padding:0 4px}
-.legend{display:flex;flex-wrap:wrap;gap:14px;padding:6px 4px 0;font-size:11.5px;color:var(--muted)}
+.chart{border:1px solid var(--line-2);border-radius:10px;padding:14px 12px 10px;margin:0 0 12px;
+  background:var(--bg-2)}
+.chart h3{font-size:13.5px;font-weight:580;margin:0 0 1px;padding:0 4px;color:var(--ink)}
+.chart .cs{font-size:11.5px;color:var(--faint);margin:0 0 8px;padding:0 4px}
+.legend{display:flex;flex-wrap:wrap;gap:14px;padding:6px 4px 0;font-size:11px;color:var(--muted)}
 .legend i{display:inline-block;width:13px;height:3px;border-radius:2px;margin-right:6px;vertical-align:2px}
 .legend i.dash{background:repeating-linear-gradient(90deg,var(--blue) 0 5px,transparent 5px 8px)}
 
-/* ---------- take-home ---------- */
-.take{background:var(--paper-2);border:1px solid var(--line);border-radius:12px;
-  padding:16px 18px;margin:6px 0 0}
-.take .k{font-size:10.5px;font-weight:590;letter-spacing:.09em;text-transform:uppercase;
-  color:var(--faint);margin:0 0 7px}
-.take p{font-size:14px;line-height:1.55;color:var(--ink-2);margin:0}
+.take{background:var(--bg-2);border:1px solid var(--line-2);border-radius:10px;padding:15px 16px;margin:6px 0 0}
+.take .k{font-size:10px;font-weight:590;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--faint);margin:0 0 6px}
+.take p{font-size:14px;line-height:1.5;color:var(--ink-2);margin:0}
+.take.vazio{display:none}
 
-footer{border-top:1px solid var(--line);margin-top:34px;padding:24px 0 calc(34px + env(safe-area-inset-bottom));
-  font-size:12px;line-height:1.6;color:var(--faint)}
+footer{border-top:1px solid var(--line-2);margin-top:30px;
+  padding:22px 0 calc(34px + env(safe-area-inset-bottom));font-size:11.5px;line-height:1.6;color:var(--faint)}
 
-@media (min-width:700px){
-  body{font-size:16px}
-  .wrap{padding:0 28px}
-  section{padding:46px 0 4px}
-}
+@media (min-width:700px){ body{font-size:16px} .wrap{padding:0 26px} section{padding:42px 0 2px} }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
@@ -132,8 +130,9 @@ footer{border-top:1px solid var(--line);margin-top:34px;padding:24px 0 calc(34px
 
 <nav id="tabs">
   <div class="row">
-    <a href="#timeline">Timeline</a>
-    <a href="#mecanismo">Mecanismo</a>
+    <a href="#contexto">Contexto</a>
+    <a href="#obstrucao">Obstrução</a>
+    <a href="#conduta">Conduta</a>
     <a href="#reversao">Reversão</a>
     <a href="#graficos">Gráficos</a>
   </div>
@@ -142,227 +141,181 @@ footer{border-top:1px solid var(--line);margin-top:34px;padding:24px 0 calc(34px
 <div class="wrap">
 
 <header>
-  <p class="kicker">15º Congresso do DIC · Curitiba 2026 · ID 1133896</p>
+  <p class="kicker">15º Congresso do DIC, Curitiba 2026, ID 1133896</p>
   <h1>Ventrículo esquerdo suicida após TAVI</h1>
-  <p class="sub">Obstrução dinâmica intraventricular em paciente octogenário com cirrose hepática.</p>
-  <p class="meta"><b>Flores MP</b>; Freire de Carvalho MVS; Souza Neri AJ; <b>Almeida PV</b>; Bomfim AB;
-     Vieira de Melo JP; Cavalcante LRS; Filgueiras PHC; Vieira de Melo RM</p>
-  <p class="meta">Hospital São Rafael, Rede D'Or. Salvador, BA.</p>
-  <p class="note">Material complementar ao pôster: imagens, timeline e gráficos.</p>
+  <p class="meta"><b>Flores MP</b><sup>1</sup>; Freire de Carvalho MVS<sup>1</sup>; Souza Neri AJ<sup>1</sup>;
+     <b>Almeida PV</b><sup>2</sup>; Bomfim AB<sup>2</sup>; Vieira de Melo JP<sup>3</sup>;
+     Cavalcante LRS<sup>2</sup>; Filgueiras PHC<sup>1</sup>; Vieira de Melo RM<sup>1</sup></p>
+  <p class="afil">
+    <span><sup>1</sup>Hospital São Rafael, Rede D'Or, Salvador, BA</span>
+    <span><sup>2</sup>Universidade Federal da Bahia, Salvador, BA</span>
+    <span><sup>3</sup>Escola Bahiana de Medicina e Saúde Pública, Salvador, BA</span>
+  </p>
 </header>
 
-<!-- ============================ TIMELINE ============================ -->
-<section id="timeline">
-  <p class="kicker">Timeline</p>
-  <h2>Homem, 82 anos</h2>
-  <p class="sub" style="font-size:14.5px">Cirrose hepática por etilismo com hipertensão portal e ascite,
-     DAC previamente tratada, HAS, DM2 e anemia ferropriva. STS 5%.</p>
-
-  <ol class="tl">
-    <li>
-      <p class="t">Pré-TAVI</p>
-      <p class="d">Valva aórtica intensamente calcificada, escore de cálcio valvar acima de 2.000 UA.
-      Gradiente VE/Ao máximo de <b>51 mmHg</b> e médio de <b>35 mmHg</b>, Vmáx 3,58 m/s,
-      área valvar 1,0 cm², DVI 0,31. Ventrículo esquerdo com remodelamento concêntrico:
-      DDVE 48 mm, ERP 0,48, índice de massa 102 g/m², FEVE 72%, disfunção diastólica grau II.
-      Átrio esquerdo com volume indexado de 42 mL/m².</p>
-    </li>
-    <li>
-      <p class="t">Implante</p>
-      <p class="d">Acesso femoral direito, sedação consciente e marca-passo temporário endocárdico.
-      Bioprótese balão-expansível <b>Sapien 3 Ultra Resilia nº 23</b>. Controle imediato com gradiente
-      médio invasivo de <b>5 mmHg</b>, gradiente ecocardiográfico de 17/8 mmHg, DVI 0,73 e refluxo
-      aórtico mínimo. Sem derrame pericárdico e sem alteração da contratilidade segmentar.</p>
-    </li>
-    <li class="mark">
-      <p class="t">65 minutos após a abertura da prótese</p>
-      <p class="d">Hipotensão com <b>PAM de 45 mmHg</b> e taquicardia sinusal de <b>110 bpm</b>,
-      com escalonamento de noradrenalina.</p>
-    </li>
-    <li class="mark">
-      <p class="t">Ecocardiograma à beira do leito</p>
-      <p class="d">Hipercontratilidade global do ventrículo esquerdo, obliteração sistólica da cavidade
-      e aceleração sistólica do fluxo intracavitário. Prótese normofuncionante.</p>
-    </li>
-    <li class="mark">
-      <p class="t">Doppler contínuo</p>
-      <p class="d">Velocidade máxima de <b>6,40 m/s</b> e gradiente intraventricular de
-      <b>163,88 mmHg</b>, com envelope côncavo e pico tardio.</p>
-    </li>
-    <li>
-      <p class="t">Conduta</p>
-      <p class="d">Expansão volêmica de 1.500 mL e betabloqueador endovenoso. Vasopressor mantido em
-      baixa vazão. Inotrópicos e cronotrópicos positivos evitados.</p>
-    </li>
-    <li class="good">
-      <p class="t">30 minutos depois</p>
-      <p class="d">Gradiente intraventricular de <b>15 mmHg</b>, com redução da noradrenalina.</p>
-    </li>
-    <li>
-      <p class="t">POD 0, noite</p>
-      <p class="d">UTI cardiológica. Gradiente transprotético de 17/8 mmHg e noradrenalina em baixa vazão.
-      Troponina hs de 737,4 ng/L e NT-proBNP de 347 pg/mL na coleta do dia.</p>
-    </li>
-    <li>
-      <p class="t">POD 1, tarde</p>
-      <p class="d">Episódio isolado de hipotensão. ETT com ventrículo hiperdinâmico, prótese
-      normofuncionante e gradiente médio de 7 mmHg, <b>sem recorrência da obstrução</b>.
-      Expansão de 250 mL e noradrenalina a 0,04 µg/kg/min. Troponina 141,2 ng/L e NT-proBNP 636 pg/mL.</p>
-    </li>
-    <li class="good">
-      <p class="t">POD 2</p>
-      <p class="d">Sem drogas vasoativas. <b>FEVE de 73%</b>, ausência de gradiente intraventricular e
-      prótese normofuncionante. ECG em ritmo sinusal a 79 bpm. Troponina 72,6 ng/L e NT-proBNP 259 pg/mL.</p>
-    </li>
-    <li class="good">
-      <p class="t">Alta</p>
-      <p class="d">Alta hospitalar em boas condições clínicas, sem recorrência do gradiente.</p>
-    </li>
-  </ol>
+<!-- ============================ CONTEXTO ============================ -->
+<section id="contexto">
+  <p class="kicker">Contexto</p>
+  <ul class="ctx">
+    <li><span class="k">Paciente</span><span class="v">Homem, 82 anos. Cirrose hepática com hipertensão portal.</span></li>
+    <li><span class="k">Indicação</span><span class="v">Estenose aórtica importante sintomática. VE com remodelamento concêntrico e cavidade reduzida.</span></li>
+    <li><span class="k">Implante</span><span class="v">Bioprótese balão-expansível <b>Sapien 3 Ultra Resilia nº 23</b>, via femoral direita. Gradiente médio invasivo de 5 mmHg, refluxo mínimo.</span></li>
+    <li class="hit"><span class="k">+ 65 min</span><span class="v"><b>PAM 45 mmHg</b>, FC 110 bpm. Ecocardiograma à beira do leito.</span></li>
+  </ul>
   <hr class="rule">
 </section>
 
-<!-- ============================ MECANISMO ============================ -->
-<section id="mecanismo">
-  <p class="kicker">Mecanismo</p>
-  <h2>Por que o gradiente aparece</h2>
-  <p class="sub" style="font-size:14.5px">A correção da estenose remove de forma abrupta a pós-carga contra
-     a qual o ventrículo hipertrofiado vinha trabalhando. Em cavidade pequena e hipercontrátil, a queda do
-     volume sistólico final aproxima as paredes e produz gradiente dinâmico intracavitário.</p>
-
-  <div class="nums">
-    <div><p class="k">Vmáx</p><p class="v">6,40 <span>m/s</span></p></div>
-    <div><p class="k">Gradiente</p><p class="v">163,88 <span>mmHg</span></p></div>
-    <div><p class="k">DDVE</p><p class="v">48 <span>mm</span></p></div>
-  </div>
+<!-- ============================ OBSTRUÇÃO ============================ -->
+<section id="obstrucao">
+  <p class="kicker">Obstrução</p>
 
   <figure>
     <div class="frame">
-      <span class="lb">2D · durante a obstrução</span>
+      <span class="lb">2D apical</span>
       <video src="media/Image102_000.mp4" poster="media/Image102_000.jpg" muted loop playsinline preload="metadata" data-auto></video>
       <div class="tap">Toque para reproduzir</div>
     </div>
-    <figcaption><b>Obliteração sistólica da cavidade.</b> Ventrículo de dimensões reduzidas, com
-      contratilidade global aumentada e volume sistólico final próximo de zero.</figcaption>
+    <figcaption><b>VE hipercontrátil.</b> Obliteração sistólica da cavidade.</figcaption>
   </figure>
 
   <figure>
     <div class="frame">
-      <span class="lb">2D · durante a obstrução</span>
+      <span class="lb">2D apical</span>
       <video src="media/Image105_000.mp4" poster="media/Image105_000.jpg" muted loop playsinline preload="metadata" data-auto></video>
       <div class="tap">Toque para reproduzir</div>
     </div>
-    <figcaption><b>Segunda janela apical.</b> Mesma dinâmica de esvaziamento em outro plano.</figcaption>
+    <figcaption>Outro plano, mesma dinâmica de esvaziamento.</figcaption>
   </figure>
 
   <figure>
     <div class="frame">
-      <span class="lb">Doppler colorido · durante a obstrução</span>
+      <span class="lb">Doppler colorido</span>
       <video src="media/Image107_000.mp4" poster="media/Image107_000.jpg" muted loop playsinline preload="metadata" data-auto></video>
       <div class="tap">Toque para reproduzir</div>
     </div>
-    <figcaption><b>Aceleração intracavitária.</b> Mosaico de aliasing dentro da cavidade, e não na prótese.</figcaption>
+    <figcaption><b>Aliasing intracavitário</b>, e não na prótese.</figcaption>
   </figure>
 
   <figure>
     <div class="frame">
-      <span class="lb">Doppler colorido · durante a obstrução</span>
+      <span class="lb">Doppler colorido</span>
       <video src="media/Image112_000.mp4" poster="media/Image112_000.jpg" muted loop playsinline preload="metadata" data-auto></video>
       <div class="tap">Toque para reproduzir</div>
     </div>
-    <figcaption><b>Coluna de aliasing.</b> Turbulência da região médio-ventricular até a via de saída.</figcaption>
+    <figcaption>Coluna de turbulência da região médio-ventricular até a via de saída.</figcaption>
   </figure>
 
   <figure>
     <div class="frame">
-      <span class="lb">Doppler contínuo · pico do evento</span>
+      <span class="lb">Doppler contínuo</span>
       <img src="media/doppler-obstrucao.jpg" alt="Doppler contínuo com velocidade máxima de 6,40 m/s e gradiente de 163,88 mmHg" loading="lazy">
     </div>
-    <figcaption><b>Envelope côncavo com pico tardio.</b> Vmáx de 6,40 m/s e gradiente de 163,88 mmHg,
-      padrão de obstrução dinâmica e não de estenose fixa.</figcaption>
+    <figcaption><b>Envelope côncavo com pico tardio.</b> Vmáx 6,40 m/s.</figcaption>
   </figure>
 
-  <p class="note" style="margin-top:0">Fatores presentes neste caso: remodelamento concêntrico com cavidade
-     reduzida e função sistólica preservada. Pela cirrose com hipertensão portal, somam-se hipovolemia
-     efetiva, vasodilatação esplâncnica e circulação hiperdinâmica.</p>
+  <div class="big">
+    <div class="n">163,88</div>
+    <div class="u">mmHg de gradiente intraventricular</div>
+  </div>
+  <hr class="rule">
+</section>
+
+<!-- ============================ CONDUTA ============================ -->
+<section id="conduta">
+  <p class="kicker">Conduta</p>
+  <h2>Aumentar pré-carga, reduzir contratilidade</h2>
+
+  <ul class="do">
+    <li><b>Expansão volêmica</b> de 1.500 mL</li>
+    <li><b>Betabloqueador</b> endovenoso</li>
+    <li><b>Vasopressor</b> em baixa vazão, para manter a pós-carga</li>
+    <li><b>Ecocardiograma seriado</b> à beira do leito</li>
+  </ul>
+  <p class="kicker" style="margin:16px 0 8px">Evitados</p>
+  <ul class="do no">
+    <li>Inotrópico</li>
+    <li>Cronotrópico positivo</li>
+    <li>Diurético</li>
+  </ul>
   <hr class="rule">
 </section>
 
 <!-- ============================ REVERSÃO ============================ -->
 <section id="reversao">
   <p class="kicker">Reversão</p>
-  <h2>Após volume e betabloqueador</h2>
-  <p class="sub" style="font-size:14.5px">Trinta minutos após expansão volêmica de 1.500 mL e
-     betabloqueador endovenoso.</p>
 
-  <div class="nums">
-    <div><p class="k">Vmáx</p><p class="v">2,02 <span>m/s</span></p></div>
-    <div><p class="k">Gradiente</p><p class="v">16,33 <span>mmHg</span></p></div>
-    <div><p class="k">FEVE POD 2</p><p class="v">73 <span>%</span></p></div>
+  <figure>
+    <div class="frame">
+      <span class="lb">Doppler contínuo, 30 min depois</span>
+      <img src="media/doppler-pos.jpg" alt="Doppler contínuo após tratamento com velocidade máxima de 2,02 m/s e gradiente de 16,33 mmHg" loading="lazy">
+    </div>
+    <figcaption><b>Envelope baixo e arredondado.</b> Vmáx 2,02 m/s.</figcaption>
+  </figure>
+
+  <div class="big ok">
+    <div class="n">16,33</div>
+    <div class="u">mmHg, trinta minutos depois</div>
   </div>
 
   <figure>
     <div class="frame">
-      <span class="lb">Doppler contínuo · após tratamento</span>
-      <img src="media/doppler-pos.jpg" alt="Doppler contínuo após tratamento com velocidade máxima de 2,02 m/s e gradiente de 16,33 mmHg" loading="lazy">
-    </div>
-    <figcaption><b>Envelope baixo e arredondado.</b> Vmáx de 2,02 m/s e gradiente de 16,33 mmHg.</figcaption>
-  </figure>
-
-  <figure>
-    <div class="frame">
-      <span class="lb">2D · após tratamento</span>
+      <span class="lb">2D apical</span>
       <video src="media/Image138_000.mp4" poster="media/Image138_000.jpg" muted loop playsinline preload="metadata" data-auto></video>
       <div class="tap">Toque para reproduzir</div>
     </div>
-    <figcaption><b>Cavidade preenchida.</b> Volume sistólico final recuperado e via de saída mantida aberta.</figcaption>
+    <figcaption><b>Cavidade preenchida.</b> Volume sistólico final recuperado.</figcaption>
   </figure>
 
   <figure>
     <div class="frame">
-      <span class="lb">Doppler colorido · após tratamento</span>
+      <span class="lb">Doppler colorido</span>
       <video src="media/Image139_000.mp4" poster="media/Image139_000.jpg" muted loop playsinline preload="metadata" data-auto></video>
       <div class="tap">Toque para reproduzir</div>
     </div>
-    <figcaption><b>Fluxo laminar.</b> Sem mosaico de aliasing intracavitário. Prótese normofuncionante.</figcaption>
+    <figcaption><b>Fluxo laminar.</b> Prótese normofuncionante.</figcaption>
   </figure>
+
+  <ul class="ctx">
+    <li><span class="k">POD 1</span><span class="v">Episódio isolado de hipotensão, sem recorrência do gradiente.</span></li>
+    <li><span class="k">POD 2</span><span class="v"><b>FEVE 73%</b>, sem gradiente intraventricular, sem droga vasoativa.</span></li>
+    <li><span class="k">Alta</span><span class="v">Em boas condições clínicas.</span></li>
+  </ul>
   <hr class="rule">
 </section>
 
 <!-- ============================ GRÁFICOS ============================ -->
 <section id="graficos">
   <p class="kicker">Gráficos</p>
-  <h2>Gradientes e biomarcadores</h2>
 
   <div class="chart">
     <h3>Gradientes ao longo do internamento</h3>
     <p class="cs">Intraventricular dinâmico e médio transprotético, em mmHg</p>
-    <svg viewBox="0 0 360 210" role="img" aria-label="Gradiente intraventricular de 163 para 15 mmHg após volume e betabloqueador, com gradiente transprotético estável e baixo">
-      <g font-size="8.5" fill="#8A8F96">
-        <line x1="30" y1="20"    x2="348" y2="20"    stroke="#EDEEF0"/><text x="26" y="23" text-anchor="end">180</text>
-        <line x1="30" y1="55"    x2="348" y2="55"    stroke="#EDEEF0"/><text x="26" y="58" text-anchor="end">140</text>
-        <line x1="30" y1="90"    x2="348" y2="90"    stroke="#EDEEF0"/><text x="26" y="93" text-anchor="end">100</text>
-        <line x1="30" y1="125"   x2="348" y2="125"   stroke="#EDEEF0"/><text x="26" y="128" text-anchor="end">60</text>
-        <line x1="30" y1="160"   x2="348" y2="160"   stroke="#EDEEF0"/><text x="26" y="163" text-anchor="end">20</text>
-        <line x1="30" y1="177.5" x2="348" y2="177.5" stroke="#D9DCE1"/><text x="26" y="180.5" text-anchor="end">0</text>
+    <svg viewBox="0 0 360 210" role="img" aria-label="Gradiente intraventricular de 163 para 16 mmHg após volume e betabloqueador, com gradiente transprotético baixo e estável">
+      <g font-size="8.5" fill="#7E848C">
+        <line x1="30" y1="20"    x2="348" y2="20"    stroke="#1E2126"/><text x="26" y="23" text-anchor="end">180</text>
+        <line x1="30" y1="55"    x2="348" y2="55"    stroke="#1E2126"/><text x="26" y="58" text-anchor="end">140</text>
+        <line x1="30" y1="90"    x2="348" y2="90"    stroke="#1E2126"/><text x="26" y="93" text-anchor="end">100</text>
+        <line x1="30" y1="125"   x2="348" y2="125"   stroke="#1E2126"/><text x="26" y="128" text-anchor="end">60</text>
+        <line x1="30" y1="160"   x2="348" y2="160"   stroke="#1E2126"/><text x="26" y="163" text-anchor="end">20</text>
+        <line x1="30" y1="177.5" x2="348" y2="177.5" stroke="#2C3138"/><text x="26" y="180.5" text-anchor="end">0</text>
       </g>
-      <polyline points="30,147 83,170.5 189,167 295,171.4" fill="none" stroke="#185FA5" stroke-width="1.8"
+      <polyline points="30,147 83,170.5 189,167 295,171.4" fill="none" stroke="#6FA8DC" stroke-width="1.8"
                 stroke-dasharray="5 3.5" stroke-linejoin="round" stroke-linecap="round"/>
-      <polyline points="83,34.9 136,164.4 189,162.6 295,171.4" fill="none" stroke="#E24B4A" stroke-width="2.4"
+      <polyline points="83,34.9 136,164.4 189,162.6 295,171.4" fill="none" stroke="#FF6B69" stroke-width="2.4"
                 stroke-linejoin="round" stroke-linecap="round"/>
-      <g fill="#185FA5">
+      <g fill="#6FA8DC">
         <rect x="27" y="144" width="6" height="6" transform="rotate(45 30 147)"/>
         <rect x="80" y="167.5" width="6" height="6" transform="rotate(45 83 170.5)"/>
         <rect x="186" y="164" width="6" height="6" transform="rotate(45 189 167)"/>
         <rect x="292" y="168.4" width="6" height="6" transform="rotate(45 295 171.4)"/>
       </g>
-      <g fill="#E24B4A">
+      <g fill="#FF6B69">
         <path d="M83 30.9 l4.5 8 h-9 Z"/><path d="M136 160.4 l4.5 8 h-9 Z"/>
         <path d="M189 158.6 l4.5 8 h-9 Z"/><path d="M295 167.4 l4.5 8 h-9 Z"/>
       </g>
-      <text x="90" y="33" font-size="11" font-weight="600" fill="#E24B4A">163 mmHg</text>
-      <text x="142" y="155" font-size="10.5" font-weight="600" fill="#E24B4A">15</text>
-      <g font-size="8" fill="#8A8F96" text-anchor="middle">
+      <text x="90" y="33" font-size="11" font-weight="600" fill="#FF6B69">163 mmHg</text>
+      <text x="142" y="155" font-size="10.5" font-weight="600" fill="#FF6B69">16</text>
+      <g font-size="8" fill="#7E848C" text-anchor="middle">
         <text x="30"  y="192">Pré-</text><text x="30"  y="200">TAVI</text>
         <text x="83"  y="192">Pico</text><text x="83"  y="200">do evento</text>
         <text x="136" y="192">Pós-BB</text><text x="136" y="200">e volume</text>
@@ -373,7 +326,7 @@ footer{border-top:1px solid var(--line);margin-top:34px;padding:24px 0 calc(34px
       </g>
     </svg>
     <div class="legend">
-      <span><i style="background:#E24B4A"></i>Gradiente intraventricular</span>
+      <span><i style="background:#FF6B69"></i>Gradiente intraventricular</span>
       <span><i class="dash"></i>Gradiente médio transprotético</span>
     </div>
   </div>
@@ -382,51 +335,48 @@ footer{border-top:1px solid var(--line);margin-top:34px;padding:24px 0 calc(34px
     <h3>Biomarcadores</h3>
     <p class="cs">Troponina hs em ng/L e NT-proBNP em pg/mL</p>
     <svg viewBox="0 0 360 200" role="img" aria-label="Troponina de 737 para 73 ng/L e NT-proBNP de 347 para 636 e depois 259 pg/mL">
-      <g font-size="8.5" fill="#8A8F96">
-        <line x1="34" y1="22"  x2="348" y2="22"  stroke="#EDEEF0"/><text x="30" y="25" text-anchor="end">800</text>
-        <line x1="34" y1="60"  x2="348" y2="60"  stroke="#EDEEF0"/><text x="30" y="63" text-anchor="end">600</text>
-        <line x1="34" y1="98"  x2="348" y2="98"  stroke="#EDEEF0"/><text x="30" y="101" text-anchor="end">400</text>
-        <line x1="34" y1="136" x2="348" y2="136" stroke="#EDEEF0"/><text x="30" y="139" text-anchor="end">200</text>
-        <line x1="34" y1="174" x2="348" y2="174" stroke="#D9DCE1"/><text x="30" y="177" text-anchor="end">0</text>
+      <g font-size="8.5" fill="#7E848C">
+        <line x1="34" y1="22"  x2="348" y2="22"  stroke="#1E2126"/><text x="30" y="25" text-anchor="end">800</text>
+        <line x1="34" y1="60"  x2="348" y2="60"  stroke="#1E2126"/><text x="30" y="63" text-anchor="end">600</text>
+        <line x1="34" y1="98"  x2="348" y2="98"  stroke="#1E2126"/><text x="30" y="101" text-anchor="end">400</text>
+        <line x1="34" y1="136" x2="348" y2="136" stroke="#1E2126"/><text x="30" y="139" text-anchor="end">200</text>
+        <line x1="34" y1="174" x2="348" y2="174" stroke="#2C3138"/><text x="30" y="177" text-anchor="end">0</text>
       </g>
-      <polyline points="40,34 194,147.2 348,160.1" fill="none" stroke="#BA7517" stroke-width="2.1" stroke-linejoin="round" stroke-linecap="round"/>
-      <polyline points="40,108.1 194,53.2 348,124.8" fill="none" stroke="#0F6E56" stroke-width="2.1" stroke-linejoin="round" stroke-linecap="round"/>
-      <g fill="#BA7517"><circle cx="40" cy="34" r="3.8"/><circle cx="194" cy="147.2" r="3.8"/><circle cx="348" cy="160.1" r="3.8"/></g>
-      <g fill="#0F6E56"><rect x="36.5" y="104.6" width="7" height="7"/><rect x="190.5" y="49.7" width="7" height="7"/><rect x="344.5" y="121.3" width="7" height="7"/></g>
-      <text x="48" y="32" font-size="10.5" font-weight="600" fill="#BA7517">737</text>
-      <text x="200" y="47" font-size="10.5" font-weight="600" fill="#0F6E56">636</text>
-      <g font-size="8" fill="#8A8F96" text-anchor="middle">
+      <polyline points="40,34 194,147.2 348,160.1" fill="none" stroke="#E2A93F" stroke-width="2.1" stroke-linejoin="round" stroke-linecap="round"/>
+      <polyline points="40,108.1 194,53.2 348,124.8" fill="none" stroke="#3ECFA0" stroke-width="2.1" stroke-linejoin="round" stroke-linecap="round"/>
+      <g fill="#E2A93F"><circle cx="40" cy="34" r="3.8"/><circle cx="194" cy="147.2" r="3.8"/><circle cx="348" cy="160.1" r="3.8"/></g>
+      <g fill="#3ECFA0"><rect x="36.5" y="104.6" width="7" height="7"/><rect x="190.5" y="49.7" width="7" height="7"/><rect x="344.5" y="121.3" width="7" height="7"/></g>
+      <text x="48" y="32" font-size="10.5" font-weight="600" fill="#E2A93F">737</text>
+      <text x="200" y="47" font-size="10.5" font-weight="600" fill="#3ECFA0">636</text>
+      <g font-size="8" fill="#7E848C" text-anchor="middle">
         <text x="44"  y="188">Dia 0, pós-evento</text>
         <text x="194" y="188">POD 1</text>
         <text x="344" y="188">POD 2</text>
       </g>
     </svg>
     <div class="legend">
-      <span><i style="background:#BA7517"></i>Troponina hs</span>
-      <span><i style="background:#0F6E56"></i>NT-proBNP</span>
+      <span><i style="background:#E2A93F"></i>Troponina hs</span>
+      <span><i style="background:#3ECFA0"></i>NT-proBNP</span>
     </div>
-    <p class="note" style="padding:0 4px;margin-top:8px">As duas primeiras dosagens são da mesma coleta,
-       no dia 0, após o evento.</p>
   </div>
 
-  <div class="take">
+  <!-- TAKE-HOME: escreva a frase entre as tags <p> abaixo. Enquanto estiver vazio, o bloco nao aparece. -->
+  <div class="take" id="take">
     <p class="k">Take-home</p>
-    <p>Hipotensão precoce após TAVI em ventrículo pequeno, remodelado e hipercontrátil pode corresponder a
-       obstrução dinâmica intracavitária. O ecocardiograma à beira do leito separa essa condição das demais
-       causas de instabilidade periprocedimento e define a conduta.</p>
+    <p></p>
   </div>
 </section>
 
 <footer>
-  <p style="margin:0 0 4px">Ventrículo Esquerdo Suicida Após TAVI em Paciente Octogenário. ID 1133896.</p>
-  <p style="margin:0 0 4px">Hospital São Rafael, Rede D'Or. Salvador, BA.</p>
-  <p style="margin:0">15º Congresso do DIC. Curitiba, outubro de 2026.</p>
+  <p style="margin:0 0 4px">Ventrículo Esquerdo Suicida Após TAVI em Paciente Octogenário, ID 1133896</p>
+  <p style="margin:0 0 4px">Hospital São Rafael, Rede D'Or, Salvador, BA</p>
+  <p style="margin:0">15º Congresso do DIC, Curitiba, outubro de 2026</p>
 </footer>
 
 </div>
 
 <script>
-/* ---------- vídeo controlado pela rolagem ---------- */
+/* vídeo controlado pela rolagem: entra na tela toca, sai pausa */
 (function(){
   const vids = [...document.querySelectorAll('video[data-auto]')];
   if (!vids.length) return;
@@ -458,7 +408,6 @@ footer{border-top:1px solid var(--line);margin-top:34px;padding:24px 0 calc(34px
       if (v.paused) { want.add(v); box.classList.remove('needtap'); tocar(v); }
       else { want.delete(v); v.pause(); }
     });
-    // o navegador pode pausar sozinho (bateria, app em segundo plano): retoma se ainda está à vista
     v.addEventListener('pause', () => {
       if (!want.has(v)) return;
       setTimeout(() => { if (want.has(v) && v.paused) tocar(v); }, 260);
@@ -471,7 +420,13 @@ footer{border-top:1px solid var(--line);margin-top:34px;padding:24px 0 calc(34px
   });
 })();
 
-/* ---------- linha de progresso e aba ativa ---------- */
+/* take-home some enquanto estiver sem texto */
+(function(){
+  const t = document.getElementById('take');
+  if (t && !t.querySelector('p:not(.k)').textContent.trim()) t.classList.add('vazio');
+})();
+
+/* linha de progresso e aba ativa */
 (function(){
   const bar  = document.getElementById('prog');
   const tabs = [...document.querySelectorAll('#tabs a')];
